@@ -212,10 +212,15 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            white-space: nowrap;
         }
 
         .mode-btn.active {
             color: #4d3092;
+        }
+
+        #twoplayer-btn {
+            margin-left: 40px;
         }
 
         .underline {
@@ -275,6 +280,7 @@
             color: white;
             font-size: 16px;
             font-weight: 500;
+            white-space: nowrap;
         }
 
         body, html {
@@ -309,6 +315,23 @@
         <span class="rank">#2</span>
         <span class="level-name">in canon</span>
     </a>
+
+     <a href="aridl3.html" class="level-card active">
+        <span class="rank">#3</span>
+        <span class="level-name">teehee colon three</span>
+    </a>
+
+    <a href="aridl4.html" class="level-card active">
+        <span class="rank">#4</span>
+        <span class="level-name">Aurora
+        </span>
+    </a>
+
+    <a href="aridl5.html" class="level-card active">
+        <span class="rank">#5</span>
+        <span class="level-name">Dragonlocked</span>
+    </a>
+
 
 </div>
 
@@ -347,11 +370,14 @@
     document.getElementById('classic-btn');
     const platformerBtn =
     document.getElementById('platformer-btn');
+    const twoplayerBtn =
+    document.getElementById('twoplayer-btn');
     const underline =
     document.querySelector('.underline');
     classicBtn.addEventListener('click', () => {
         classicBtn.classList.add('active');
         platformerBtn.classList.remove('active');
+        twoplayerBtn.classList.remove('active');
         underline.style.transform =
 'translateX(0%)';
     });
@@ -359,6 +385,15 @@
     {
         platformerBtn.classList.add('active');
         classicBtn.classList.remove('active');
+        twoplayerBtn.classList.remove('active');
+        underline.style.transform =
+        'translateX(33%)';
+    });
+    twoplayerBtn.addEventListener('click', () => 
+    {
+        twoplayerBtn.classList.add('active');
+        classicBtn.classList.remove('active');
+        platformerBtn.classList.remove('active');
         underline.style.transform =
         'translateX(100%)';
     });
