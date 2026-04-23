@@ -4,11 +4,11 @@
     <div class="logo">ARIDL</div>
     <div class="nav-links">
         <a href="index.html">List</a>
-         <a href="aridl2player.html">2 Player List</a>
+        <a href="aridl2player.html">2 Player List</a>
         <a href="aridlplayers.html">Players</a>
         <a href="aridlguidelines.html">Guidelines</a>
         <a href="aridlstaff.html">Staff</a>
-        <a href="https://discord.gg/F2zuzQDvQJ" target="_blank" rel="noopener noreferrer">Discord</a>
+       <a href="https://discord.gg/F2zuzQDvQJ" target="_blank" rel="noopener noreferrer">Discord</a>
     </div>
 </nav>
 <head>
@@ -186,7 +186,7 @@
             text-transform: uppercase;
         }
 
-        .nav-links a:hover {
+         .nav-links a:hover {
             color: #f292ff;
             background-color: #bc74ff;
             padding: 5px 10px;
@@ -194,13 +194,7 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        .mode-switcher {
-            position: relative;
-            display: flex;
-            width: 250px;
-            margin: 20px 0;
-            background: transparent;
-        }
+       
 
         .mode-btn {
             flex: 1;
@@ -303,56 +297,27 @@
     </style>
 </head>
 
-<div class="mode-switcher">
-   <a href="aridl.html" class="mode-btn active" id="classic-btn">Classic</a>
-
-    <a href="aridlplatformer.html" class="mode-btn" id="platformer-btn">Platformer</a>
-
-   <div class="underline"></div>
-</div>
 
 <div class="list-scroll-box">
-    <a href="#" class="level-card active">
+    <a href="aridl2player.html" class="level-card active">
         <span class="rank">#1</span>
-        <span class="level-name">smohcs</span>
+        <span class="level-name">Geochroma Reminisce</span>
     </a>
-
-    <a href="aridl2.html" class="level-card active">
-        <span class="rank">#2</span>
-        <span class="level-name">in canon</span>
-    </a>
-
-    <a href="aridl3.html" class="level-card active">
-        <span class="rank">#3</span>
-        <span class="level-name">teehee colon three</span>
-    </a>
-
-    <a href="aridl4.html" class="level-card active">
-        <span class="rank">#4</span>
-        <span class="level-name">Aurora</span>
-    </a>
-
-     <a href="aridl5.html" class="level-card active">
-        <span class="rank">#5</span>
-        <span class="level-name">Dragonlocked</span>
-    </a>
-
-
 </div>
 
 
 </div>
 
     <div class="main-display">
-        <p class="title">smohcs</p>
-        <p class="subtitle">smohcs is currently the hardest rated insane demon in the game and has a glow scheme with a quiet song.</p>
+        <p class="title">Geochroma Reminisce</p>
+        <p class="subtitle">Description Placeholder</p>
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/pyZQkdCBGzk?si=ZNrWVg7lVnW95CxD" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/BMOo9px0CbY?si=-i9ksSu9zUfVbgBj" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="info-row">
             <div class="info-card">
                 <div class="label">LEVEL ID</div>
-                <div class="value">52448794</div>
+                <div class="value">123268699</div>
             </div>
             <div class="info-card">
                 <div class="label">TIER</div>
@@ -360,7 +325,7 @@
             </div>
             <div class="info-card">
                 <div class="label">CREATOR</div>
-                <div class="value">durianhead</div>
+                <div class="value">DezonGD</div>
             </div>
         </div>
     </div>
@@ -375,11 +340,14 @@
     document.getElementById('classic-btn');
     const platformerBtn =
     document.getElementById('platformer-btn');
+    const twoplayerBtn =
+    document.getElementById('twoplayer-btn');
     const underline =
     document.querySelector('.underline');
     classicBtn.addEventListener('click', () => {
         classicBtn.classList.add('active');
         platformerBtn.classList.remove('active');
+        twoplayerBtn.classList.remove('active');
         underline.style.transform =
 'translateX(0%)';
     });
@@ -387,7 +355,16 @@
     {
         platformerBtn.classList.add('active');
         classicBtn.classList.remove('active');
+        twoplayerBtn.classList.remove('active');
         underline.style.transform =
         'translateX(33%)';
+    });
+    twoplayerBtn.addEventListener('click', () => 
+    {
+        twoplayerBtn.classList.add('active');
+        classicBtn.classList.remove('active');
+        platformerBtn.classList.remove('active');
+        underline.style.transform =
+        'translateX(100%)';
     });
 </script>
